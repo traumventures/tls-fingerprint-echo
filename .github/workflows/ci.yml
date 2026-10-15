@@ -1,9 +1,8 @@
 name: ci
 
+# On demand only: gh workflow run <this file> --ref <branch>. Nothing runs by
+# itself on pull requests or pushes; deploys and releases run their own checks.
 on:
-  pull_request:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
